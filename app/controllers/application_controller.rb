@@ -25,6 +25,7 @@ class ApplicationController < Sinatra::Base
       @user = Helper.current_user(session)
     else
       redirect '/error'
+    end
   end
 
   get '/logout' do
