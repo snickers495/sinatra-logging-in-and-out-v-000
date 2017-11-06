@@ -24,7 +24,7 @@ class ApplicationController < Sinatra::Base
     if Helper.is_logged_in?(session)
       @user = Helper.current_user(session)
     else
-      redirect '/index'
+      redirect '/error'
     end
   end
 
